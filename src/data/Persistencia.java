@@ -9,6 +9,8 @@ public class Persistencia {
     private static ArrayList<Mamifero> animales = new ArrayList<>();
     private static ArrayList<Sector> sectores = new ArrayList<>();
     private static ArrayList<Especie> especies = new ArrayList<>();
+    private static ArrayList<Pais> paises = new ArrayList<>();
+
 
     private static void inicializarEspecies() {
         especies.add(new Especie("León", TipoAlimentacion.CARNIVORO, 0.2));
@@ -36,7 +38,9 @@ public class Persistencia {
     public static void inicializar() throws InvalidPropertiesFormatException{
         inicializarEspecies();
         inicializarSectores();
-    //    inicializarAnimales();
+        inicializarAnimales();
+        inicializarPaises();
+
     }
 
     public static ArrayList<Mamifero> getAnimales() {
@@ -59,6 +63,8 @@ public class Persistencia {
         return total;
     }
 
-  
-    
+    public static ArrayList<Pais> getPaises() {
+        return paises;
+    }
+
 }
