@@ -28,18 +28,19 @@ public class Persistencia {
         sectores.add(new Sector(4, -26.257250, -65.523514, 10, TipoAlimentacion.CARNIVORO, raul));
     }
     
-    private static void inicializarAnimales() throws InvalidPropertiesFormatException {
-        animales.add(new Carnivoro(5,250,especies.get(0), sectores.get(1)));
-        animales.add(new Carnivoro(2,180,especies.get(2), sectores.get(3)));
-        animales.add(new Herbivoro(3, 1020,especies.get(1), sectores.get(0), 170));
-        animales.add(new Herbivoro(8, 3800,especies.get(3), sectores.get(2), 320));
-    }
+   // private static void inicializarAnimales() throws InvalidPropertiesFormatException {
+   //     animales.add(new Carnivoro(5,250,especies.get(0), sectores.get(1)));
+   //     animales.add(new Carnivoro(2,180,especies.get(2), sectores.get(3)));
+   //     animales.add(new Herbivoro(3, 1020,especies.get(1), sectores.get(0), 170));
+   //     animales.add(new Herbivoro(8, 3800,especies.get(3), sectores.get(2), 320));
+   // }
 
     public static void inicializar() throws InvalidPropertiesFormatException{
         inicializarEspecies();
         inicializarSectores();
         inicializarAnimales();
         inicializarPaises();
+
     }
 
     public static ArrayList<Mamifero> getAnimales() {
@@ -61,7 +62,9 @@ public class Persistencia {
         }
         return total;
     }
+
     public static ArrayList<Pais> getPaises() {
         return paises;
     }
+
 }
