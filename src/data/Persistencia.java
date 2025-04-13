@@ -9,6 +9,8 @@ public class Persistencia {
     private static ArrayList<Mamifero> animales = new ArrayList<>();
     private static ArrayList<Sector> sectores = new ArrayList<>();
     private static ArrayList<Especie> especies = new ArrayList<>();
+    private static ArrayList<Pais> paises = new ArrayList<>();
+
 
     private static void inicializarEspecies() {
         especies.add(new Especie("León", TipoAlimentacion.CARNIVORO, 0.2));
@@ -37,6 +39,7 @@ public class Persistencia {
         inicializarEspecies();
         inicializarSectores();
         inicializarAnimales();
+        inicializarPaises();
     }
 
     public static ArrayList<Mamifero> getAnimales() {
@@ -57,5 +60,8 @@ public class Persistencia {
             total += animal.TieneAlimentacion(tipoAlimentacion) ? animal.calcularCantidadDeComida() : 0;
         }
         return total;
+    }
+    public static ArrayList<Pais> getPaises() {
+        return paises;
     }
 }
